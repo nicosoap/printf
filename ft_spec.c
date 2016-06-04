@@ -6,13 +6,11 @@
 /*   By: opichou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/01 15:57:49 by opichou           #+#    #+#             */
-/*   Updated: 2016/06/04 05:25:32 by opichou          ###   ########.fr       */
+/*   Updated: 2016/06/04 07:13:18 by opichou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
-
-char	*(*ft_put[177])(va_list ap);
 
 void	hlp_spec(void)
 {
@@ -38,13 +36,11 @@ void	hlp_spec(void)
 	ft_put[(int)('%')] = ft_ret_pct;
 }
 
-char		*ft_spec(char **format, va_list ap)
+char		*ft_spec(char *format, va_list ap)
 {
 	char	*ret;
-	char	*ptr;
 
 	hlp_spec();
-	ptr = *format;
-	ret = ft_put[(int)*ptr](ap);
+	ret = ft_put[(int)*format](ap);
 	return (ret);
 }

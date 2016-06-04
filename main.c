@@ -6,7 +6,7 @@
 /*   By: opichou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/03 22:50:47 by opichou           #+#    #+#             */
-/*   Updated: 2016/06/04 03:10:39 by opichou          ###   ########.fr       */
+/*   Updated: 2016/06/04 08:33:26 by opichou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int					main(void)
 //	ft_putchar('\n');
 //	ft_printf("%p", lost);
 	setlocale(LC_ALL, "en_US.UTF-8");
-	printf("mais %c",'L');
-	ft_printf("mais %c", 'G');
+	printf("mais %c/n",'L');
+	ft_printf("mais %ci %s%c", 'G', "le petit chat", '\n');
 	ft_putchar('\n');
 }
