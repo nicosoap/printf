@@ -6,7 +6,7 @@
 /*   By: opichou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/01 17:29:27 by opichou           #+#    #+#             */
-/*   Updated: 2016/06/04 01:10:01 by opichou          ###   ########.fr       */
+/*   Updated: 2016/06/08 05:39:40 by opichou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 char		*ft_ret_pct(va_list ap)
 {
 	(void)ap;
-	return(ft_strdup("%"));
+	return (ft_strdup("%"));
 }
 
 char		*ft_ret_null(va_list ap)
 {
 	(void)ap;
-	return(NULL);
+	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: opichou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/31 20:49:05 by opichou           #+#    #+#             */
-/*   Updated: 2015/12/31 20:53:15 by opichou          ###   ########.fr       */
+/*   Updated: 2016/06/04 06:59:47 by opichou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_strndup(const char *s1, size_t n)
 	int		i;
 
 	i = 0;
-	ptr = (char*)malloc((n + 1) * sizeof(*s1));
+	ptr = (char*)malloc((n * sizeof(*s1)) + 1);
 	if (ptr)
 	{
 		while (n--)
@@ -34,7 +34,7 @@ void	*ft_strndup(const char *s1, size_t n)
 	else
 	{
 		errno = ENOMEM;
-		return (0);
+		return (NULL);
 	}
 	return (ptr);
 }

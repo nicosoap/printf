@@ -6,7 +6,7 @@
 /*   By: opichou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/04 18:55:27 by opichou           #+#    #+#             */
-/*   Updated: 2016/04/04 21:13:17 by opichou          ###   ########.fr       */
+/*   Updated: 2016/06/08 05:39:17 by opichou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void				ft_putdouble(long double num, char c, size_t p)
 	else if (num < 1 && num != 0 && p > 0)
 	{
 		ft_putchar((int)(num * 10) + '0');
-		ft_putdouble(num * 10 - ((long double)((long long int)(num * 10))), c, p - 1);
+		ft_putdouble(num * 10 - ((long double)((long long int)(num * 10))), \
+				c, p - 1);
 	}
 }

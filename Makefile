@@ -6,7 +6,7 @@
 #    By: opichou <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/05 14:06:26 by opichou           #+#    #+#              #
-#    Updated: 2016/06/02 21:47:04 by opichou          ###   ########.fr        #
+#    Updated: 2016/06/08 14:28:52 by opichou          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,12 @@ FLAGS =		-Wall -Wextra -Werror
 INC =		-I./includes/
 SRC = ft_printf.c \
 	  \
-	  ft_spec.c \
+	  ft_spec.c ft_spec_l.c ft_spec_ll.c ft_spec_h.c ft_spec_hh.c ft_spec_j.c\
+	  ft_spec_z.c\
+	  ft_length.c\
+	  ft_precision.c\
+	  \
+	  ft_return_free.c  ft_cast_short.c\
 	  \
 	  ft_putdouble.c ft_longintlen.c \
 	  ft_putnbr.c ft_putnbr_fd.c ft_putnbr_hex.c \
@@ -25,9 +30,9 @@ SRC = ft_printf.c \
 	  \
 	  ft_concat.c ft_capitalize.c ft_put_pct.c ft_ret_hex_oct.c \
 	  ft_ret_i.c ft_ret_str.c ft_ret_unsigned_i.c ft_ret_wchar.c \
-	  ft_ret_pointer.c \
+	  ft_ret_pointer.c ft_ret_long_hex_oct.c ft_ret_short.c ft_spec_l.c\
 	  \
-	  ft_itoa_base.c ft_itoa.c ft_atoi.c \
+	  ft_usitoa_base.c ft_itoa_base.c ft_itoa.c ft_atoi.c \
 	  ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c ft_memchr.c \
 	  ft_memcmp.c ft_strlen.c ft_strdup.c ft_strcpy.c ft_strncpy.c ft_strcat.c \
 	  ft_strncat.c ft_strlcat.c ft_strchr.c ft_strrchr.c ft_strstr.c \

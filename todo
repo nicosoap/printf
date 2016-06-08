@@ -1,0 +1,17 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    todo                                               :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: opichou <marvin@42.fr>                     +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2016/06/08 02:22:26 by opichou           #+#    #+#              #
+#    Updated: 2016/06/08 10:49:31 by opichou          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# check : p (missing 0x), x (supposed a, instead 7fff0000000a), X (supposed A, instead 7fff0000000a)
+# check : lS lls llS lp lC undifined or no effect
+# check : %s arg must be wchar_t, same with %ld long %lD long %li long %lo unsigned long %lO unsigned long %lu unsigned long %lx unsigned long %lX unsigned long 
+check : %lls undifined behaviour or no effect
+check : %lls char* not int*, lld long long not long, llD long long not long, lli long long not long, llo unsigned long long not long, llO unsigned long long not unsigned long, llu and llU unsigned long long not unsigned long
