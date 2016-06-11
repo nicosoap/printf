@@ -6,7 +6,7 @@
 /*   By: opichou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/03 22:50:47 by opichou           #+#    #+#             */
-/*   Updated: 2016/06/08 14:20:17 by opichou          ###   ########.fr       */
+/*   Updated: 2016/06/11 13:50:15 by opichou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int					main(void)
 
 	setlocale(LC_ALL, "en_US.UTF-8");
 
-	ft_printf("lol %.10c", 'a');
+	ft_printf("lol %.99s", lost);
 //	printf("printf hd %hd hD %hD hi %hi ho %ho hO %hO hu %hu hU %hU hx %hx hX %hX pct %% %c", (short)9999910, (short)9999910, (short)9999910, (unsigned short)9999910, (unsigned short)9999910, (unsigned short)9999910, (unsigned short)9999910, (unsigned short)9999910, (unsigned short)9999910, '\n');
 //	ft_printf("ft_printf hd %hd hD %hD hi %hi ho %ho hO %hO hu %hu hU %hU hx %hx hX %hX pct %% %c", (short)9999910, (short)9999910, (short)9999910, (unsigned short)9999910, (unsigned short)9999910, (unsigned short)9999910, (unsigned short)9999910, (unsigned short)9999910, (unsigned short)9999910, '\n');
 	printf("test");

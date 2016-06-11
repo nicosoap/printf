@@ -6,7 +6,7 @@
 /*   By: opichou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/03 23:01:13 by opichou           #+#    #+#             */
-/*   Updated: 2016/06/08 14:24:09 by opichou          ###   ########.fr       */
+/*   Updated: 2016/06/10 21:46:38 by opichou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,11 @@ void				ft_putchar(char c);
 void				ft_putchar_fd(char c, int fd);
 void				ft_putwchar(wchar_t wc);
 
+int					ft_test_format(char *f);
+char				ft_get_format(char *format);
+
+char				*ft_flags(char *format, va_list ap);
+int					ft_width(char *format, va_list ap);
 char				*ft_precision(char *format, va_list ap);
 char				*ft_length(char *format, va_list ap);
 char				*ft_spec(char *format, va_list ap);

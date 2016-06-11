@@ -6,11 +6,16 @@
 /*   By: opichou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/01 15:57:49 by opichou           #+#    #+#             */
-/*   Updated: 2016/06/08 03:23:09 by opichou          ###   ########.fr       */
+/*   Updated: 2016/06/11 15:14:40 by opichou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
+
+/*
+** Spec définit le format de donnée à lire.
+** spec_h, spec_hh spec_l spec_ll prennent en compte les modifieurs "length"
+*/
 
 void	hlp_spec(void)
 {

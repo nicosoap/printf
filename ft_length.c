@@ -6,13 +6,15 @@
 /*   By: opichou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/08 07:34:18 by opichou           #+#    #+#             */
-/*   Updated: 2016/06/08 07:45:51 by opichou          ###   ########.fr       */
+/*   Updated: 2016/06/11 15:15:07 by opichou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-// length flags hh h l ll j z
+/*
+** length flags hh h l ll j z
+*/
 
 char			*ft_length(char *format, va_list ap)
 {

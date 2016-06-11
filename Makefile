@@ -6,7 +6,7 @@
 #    By: opichou <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/05 14:06:26 by opichou           #+#    #+#              #
-#    Updated: 2016/06/08 14:28:52 by opichou          ###   ########.fr        #
+#    Updated: 2016/06/10 23:53:28 by opichou          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,8 +20,9 @@ SRC = ft_printf.c \
 	  ft_spec_z.c\
 	  ft_length.c\
 	  ft_precision.c\
+	  ft_width.c\
 	  \
-	  ft_return_free.c  ft_cast_short.c\
+	  ft_return_free.c  ft_cast_short.c ft_get_format.c\
 	  \
 	  ft_putdouble.c ft_longintlen.c \
 	  ft_putnbr.c ft_putnbr_fd.c ft_putnbr_hex.c \

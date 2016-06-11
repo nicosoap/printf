@@ -6,7 +6,7 @@
 /*   By: opichou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/02 20:01:17 by opichou           #+#    #+#             */
-/*   Updated: 2016/06/08 14:22:27 by opichou          ###   ########.fr       */
+/*   Updated: 2016/06/10 20:47:10 by opichou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 //char			*(*ft_put[177])(va_list ap);
 
-int				ft_test_format(const char *restrict f)
+int				ft_test_format(char *f)
 {
 	if (*f == 's' || *f == 'S' || *f == 'p' || *f == 'd' || *f == 'D' \
 			|| *f == 'i' || *f == 'o' || *f == 'O' || *f == 'u' || *f == 'U' \
@@ -42,7 +42,7 @@ int				ft_printf(const char *restrict format, ...)
 		else
 		{
 			ret = ft_concat(ret, ft_precision((char *)++format, ap));
-			while (!ft_test_format(format))
+			while (!ft_test_format((char *)format))
 				format++;
 			format++;
 		}
