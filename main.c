@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: opichou <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: opichou <opichou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/03 22:50:47 by opichou           #+#    #+#             */
-/*   Updated: 2016/06/11 13:50:15 by opichou          ###   ########.fr       */
+/*   Updated: 2016/06/28 15:38:16 by opichou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,37 +17,9 @@
 
 int					main(void)
 {
-	char			*lost;
-//	long double		dble;
-	unsigned int	u_int;
-	int				*lame;
-	int				i;
+	char *str;
 
-	i = 4;
-	lost = "petit chien";
-//	dble = 1.7564432;
-	u_int = 165;
-	if ((lame = malloc(3 * sizeof(int) + 1)))
-	{
-		while (--i >= 0)
-			lame[i] = u_int;
-		lame[3] = '\0';
-	}
-//	ft_printf("%s", "le petit chat");
-//	ft_putchar('\n');
-//	ft_printf("%d", 1234567890);
-//	ft_putchar('\n');
-//	ft_printf("%c %x %X", 'a', u_int, u_int);
-//	ft_putchar('\n');
-//	ft_printf("%p", lost);
-	ft_putendl(ft_usitoa_base((unsigned short)999931, 10));
-
-	setlocale(LC_ALL, "en_US.UTF-8");
-
-	ft_printf("lol %.99s", lost);
-//	printf("printf hd %hd hD %hD hi %hi ho %ho hO %hO hu %hu hU %hU hx %hx hX %hX pct %% %c", (short)9999910, (short)9999910, (short)9999910, (unsigned short)9999910, (unsigned short)9999910, (unsigned short)9999910, (unsigned short)9999910, (unsigned short)9999910, (unsigned short)9999910, '\n');
-//	ft_printf("ft_printf hd %hd hD %hD hi %hi ho %ho hO %hO hu %hu hU %hU hx %hx hX %hX pct %% %c", (short)9999910, (short)9999910, (short)9999910, (unsigned short)9999910, (unsigned short)9999910, (unsigned short)9999910, (unsigned short)9999910, (unsigned short)9999910, (unsigned short)9999910, '\n');
-	printf("test");
-	ft_printf("ft_test");
-	ft_putchar('\n');
+	str = "le petit chat";
+	printf("%.8s %.8S", str, str);
+	ft_printf("%.8s %.8S", str, str);
 }

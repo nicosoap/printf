@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_flags.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: opichou <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: opichou <opichou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/11 15:01:36 by opichou           #+#    #+#             */
-/*   Updated: 2016/06/11 23:30:48 by opichou          ###   ########.fr       */
+/*   Updated: 2016/06/28 18:30:32 by opichou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,17 +33,8 @@ char				*ft_flags(char *format, va_list ap)
 	{
 		f = ft_get_flag(format);
 		if (f == '#')
-		{
-			if (ft_get_format(format) == 'o' || ft_get_format(format)== 'O')
-				buf = ft_concat(ft_strdup("0"), ft_precision(format, ap));
-			else if (ft_get_format(format) == 'x')
-				buf = ft_concat(ft_strdup("0x"), ft_precision(format, ap));
-			else if (ft_get_format(format) == 'X')
-				buf = ft_concat(ft_strdup("0X"), ft_precision(format, ap));
-			else
-				buf = ft_concat(ft_space(ft_width(format, ap), ft_precision(format, ap)));
-		}
+			return (ft_flag_h(format, ap));
 		else if (f == '0')
-			if (ft_is_num_format(ft_get_format(format)))
-				
-
+			return (ft_flag_0(format, ap));
+		}
+	}

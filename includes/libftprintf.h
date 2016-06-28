@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libftprintf.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: opichou <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: opichou <opichou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/03 23:01:13 by opichou           #+#    #+#             */
-/*   Updated: 2016/06/10 21:46:38 by opichou          ###   ########.fr       */
+/*   Updated: 2016/06/28 18:32:00 by opichou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,14 @@ int					ft_test_format(char *f);
 char				ft_get_format(char *format);
 
 char				*ft_flags(char *format, va_list ap);
+char				*ft_test_flags(char *format);
+char				ft_get_flag(char *format);
+char				*ft_flag_h(char *format, va_list ap);
+char				*ft_flag_space(char *format, va_list ap);
+char				*ft_flag_0(char *format, va_list ap);
+char				*ft_flag_plus(char *format, va_list ap);
+char				*ft_flag_minus(char *format, va_list ap);
+
 int					ft_width(char *format, va_list ap);
 char				*ft_precision(char *format, va_list ap);
 char				*ft_length(char *format, va_list ap);
@@ -162,6 +170,7 @@ void				ft_putstr(const char *s);
 void				ft_putendl(char const *s);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
+void				ft_put_com(char *str, char *val);
 
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));

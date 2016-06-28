@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: opichou <marvin@42.fr>                     +#+  +:+       +#+         #
+#    By: opichou <opichou@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/05 14:06:26 by opichou           #+#    #+#              #
-#    Updated: 2016/06/10 23:53:28 by opichou          ###   ########.fr        #
+#    Updated: 2016/06/28 18:32:55 by opichou          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,8 @@ FLAGS =		-Wall -Wextra -Werror
 INC =		-I./includes/
 SRC = ft_printf.c \
 	  \
+	  ft_flags.c ft_flag_h.c ft_flag_0.c ft_flag_minus.c ft_flag_plus.c\
+	  ft_flag_space.c ft_get_flag.c\
 	  ft_spec.c ft_spec_l.c ft_spec_ll.c ft_spec_h.c ft_spec_hh.c ft_spec_j.c\
 	  ft_spec_z.c\
 	  ft_length.c\
@@ -27,7 +29,7 @@ SRC = ft_printf.c \
 	  ft_putdouble.c ft_longintlen.c \
 	  ft_putnbr.c ft_putnbr_fd.c ft_putnbr_hex.c \
 	  \
-	  ft_putchar.c ft_putchar_fd.c ft_putwchar.c \
+	  ft_putchar.c ft_putchar_fd.c ft_putwchar.c ft_put_com.c\
 	  \
 	  ft_concat.c ft_capitalize.c ft_put_pct.c ft_ret_hex_oct.c \
 	  ft_ret_i.c ft_ret_str.c ft_ret_unsigned_i.c ft_ret_wchar.c \

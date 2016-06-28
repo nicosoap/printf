@@ -1,15 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_flag_plus.c                                     :+:      :+:    :+:   */
+/*   ft_put_com.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: opichou <opichou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/06/28 18:30:16 by opichou           #+#    #+#             */
-/*   Updated: 2016/06/28 18:31:33 by opichou          ###   ########.fr       */
+/*   Created: 2016/06/28 15:23:30 by opichou           #+#    #+#             */
+/*   Updated: 2016/06/28 15:26:49 by opichou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-char				*ft_flag_plus(char *format, va_list ap)
+void      ft_put_com(char *str, char *val) {
+    ft_putstr("   * ");
+    ft_putstr(str);
+    ft_putstr(" : ")
+    ft_putstr(val);
+    ft_putendl(".\n");
+}

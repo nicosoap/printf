@@ -3,21 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_precision.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: opichou <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: opichou <opichou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/10 18:44:51 by opichou           #+#    #+#             */
-/*   Updated: 2016/06/10 23:46:49 by opichou          ###   ########.fr       */
+/*   Updated: 2016/06/28 15:30:45 by opichou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-// precision is .* or .num defines maximum length for string 
+// precision is .* or .num defines maximum length for string
 // or maximum precision for float
 
 char			*ft_precision(char *format, va_list ap)
 {
 	int			i;
+
+	ft_put_com("format", ft_get_format(format));
 
 	if (*format != '.')
 		return (ft_spec(format, ap));
