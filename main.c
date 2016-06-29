@@ -6,7 +6,7 @@
 /*   By: opichou <opichou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/03 22:50:47 by opichou           #+#    #+#             */
-/*   Updated: 2016/06/28 15:38:16 by opichou          ###   ########.fr       */
+/*   Updated: 2016/06/29 15:19:55 by opichou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,5 @@ int					main(void)
 	char *str;
 
 	str = "le petit chat";
-	printf("%.8s %.8S", str, str);
-	ft_printf("%.8s %.8S", str, str);
+	printf("%.500s %+.12d", str, 198652302);
 }

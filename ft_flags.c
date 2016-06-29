@@ -6,7 +6,7 @@
 /*   By: opichou <opichou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/11 15:01:36 by opichou           #+#    #+#             */
-/*   Updated: 2016/06/28 18:30:32 by opichou          ###   ########.fr       */
+/*   Updated: 2016/06/29 17:43:42 by opichou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,18 @@
 char				*ft_flags(char *format, va_list ap)
 {
 	char			f;
-	int				i;
-	char			*buf;
 
-	while (ft_test_flags(format))
-	{
-		f = ft_get_flag(format);
-		if (f == '#')
-			return (ft_flag_h(format, ap));
-		else if (f == '0')
-			return (ft_flag_0(format, ap));
-		}
-	}
+	f = ft_get_flag(format);
+	if (f == '#')
+		return (ft_flag_h(format, ap));
+	else if (f == '0')
+		return (ft_flag_0(format, ap));
+	else if (f == '-')
+		return (ft_flag_minus(format, ap));
+	else if (f == '+')
+		return (ft_flag_plus(format, ap));
+	else if (f == ' ')
+		return (ft_flag_plus(format, ap));
+	else
+		return (ft_precision(format, ap));
+}
