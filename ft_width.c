@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_width.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: opichou <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: opichou <opichou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/10 19:29:58 by opichou           #+#    #+#             */
-/*   Updated: 2016/06/11 15:16:53 by opichou          ###   ########.fr       */
+/*   Updated: 2016/07/01 17:52:35 by opichou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,19 @@
 
 int				ft_width(char *format, va_list ap)
 {
-	while (!(ft_isdigit(*format)) && *format != '.' && 
-			!(ft_test_format(format)) && *format != '*')
+	int			i;
+		ft_put_com("entering ft_width", format);
+	i = ft_trim_atoi(format);
+	while (ft_test_flags(format) && *format != '.')
 		format++;
-	if (*format == '.' || ft_test_format(format))
-		return (-1);
-	else if (*format == '*')
-		return (va_arg(ap, int));
+	if (*format == '*')
+	{
+		i = (va_arg(ap, int));
+		ft_put_com("found width wilcard value",ft_itoa(i));
+	}
 	else
-		return (ft_atoi(format));
+	{
+		ft_put_com("found width written value",ft_itoa(i));
+	}
+	return (i);
 }

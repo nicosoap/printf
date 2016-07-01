@@ -3,34 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: opichou <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: opichou <opichou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/02 20:01:17 by opichou           #+#    #+#             */
-/*   Updated: 2016/06/10 20:47:10 by opichou          ###   ########.fr       */
+/*   Updated: 2016/07/01 17:13:42 by opichou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-//char			*(*ft_put[177])(va_list ap);
-
-int				ft_test_format(char *f)
-{
-	if (*f == 's' || *f == 'S' || *f == 'p' || *f == 'd' || *f == 'D' \
-			|| *f == 'i' || *f == 'o' || *f == 'O' || *f == 'u' || *f == 'U' \
-			|| *f == 'x' || *f == 'X' || *f == 'c' || *f == 'C' || *f == '%')
-		return (1);
-	else
-		return (0);
-}
-
-int				ft_printf(const char *restrict format, ...)
+char			*ft_sprintf(const char *restrict format, ...)
 {
 	va_list		ap;
 	char		*ret;
 
 	if (!(ret = ft_strdup("")))
-		return (-1);
+		return (NULL);
 	va_start(ap, format);
 	while (format && *format)
 	{
@@ -41,7 +29,34 @@ int				ft_printf(const char *restrict format, ...)
 		}
 		else
 		{
-			ret = ft_concat(ret, ft_precision((char *)++format, ap));
+			ret = ft_concat(ret, ft_flags((char *)++format, ap));
+			while (!ft_test_format((char *)format))
+				format++;
+			format++;
+		}
+	}
+	va_end(ap);
+	return (ret);
+}
+int				ft_printf(const char *restrict format, ...)
+{
+	va_list		ap;
+	char		*ret;
+
+	if (!(ret = ft_strdup("")))
+		return (-1);
+	va_start(ap, format);
+	ft_put_com("entering ft_printf", "");
+	while (format && *format)
+	{
+		if (*format != '%')
+		{
+			ret = ft_concat(ret, ft_strndup(format, ft_strxlen(format, '%')));
+			format = ft_strchr(format, '%');
+		}
+		else
+		{
+			ret = ft_concat(ret, ft_flags((char *)++format, ap));
 			while (!ft_test_format((char *)format))
 				format++;
 			format++;

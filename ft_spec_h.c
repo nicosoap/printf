@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_spec_h.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: opichou <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: opichou <opichou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/08 08:42:28 by opichou           #+#    #+#             */
-/*   Updated: 2016/06/08 11:45:45 by opichou          ###   ########.fr       */
+/*   Updated: 2016/07/01 17:21:45 by opichou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ void	hlp_spec_h(void)
 {
 	int		i;
 
+		ft_put_com("entering hlp_spec_h", "");
 	i = 177;
 	while (i-- >= 0)
 		ft_put[i] = ft_ret_null;
@@ -34,7 +35,8 @@ void	hlp_spec_h(void)
 char		*ft_spec_h(char *format, va_list ap)
 {
 	char	*ret;
-
+	
+		ft_put_com("entering ft_spec_h", "");
 	hlp_spec_h();
 	ret = ft_put[(int)*format](ap);
 	return (ret);

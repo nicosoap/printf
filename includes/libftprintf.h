@@ -6,7 +6,7 @@
 /*   By: opichou <opichou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/03 23:01:13 by opichou           #+#    #+#             */
-/*   Updated: 2016/06/28 18:32:00 by opichou          ###   ########.fr       */
+/*   Updated: 2016/07/01 18:26:31 by opichou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ typedef struct		s_printf
 }					t_printf;
 
 int					ft_printf(const char *restrict format, ...);
+char				*ft_sprintf(const char *restrict format, ...);
 
 void				ft_putdouble(long double num, char c, size_t p);
 void				ft_putnbr(int n);
@@ -54,19 +55,23 @@ void				ft_putwchar(wchar_t wc);
 
 int					ft_test_format(char *f);
 char				ft_get_format(char *format);
+char				f_gf(char *format);
 
-char				*ft_flags(char *format, va_list ap);
-char				*ft_test_flags(char *format);
+char				*ft_flags(char *f, va_list ap);
+int					ft_test_flags(char *f);
+int					is_flag(char *f, char c);
 char				ft_get_flag(char *format);
-char				*ft_flag_h(char *format, va_list ap);
-char				*ft_flag_space(char *format, va_list ap);
-char				*ft_flag_0(char *format, va_list ap);
-char				*ft_flag_plus(char *format, va_list ap);
-char				*ft_flag_minus(char *format, va_list ap);
+char				*ft_flag_h(char *format, char *buf);
+char				*ft_flag_space(char *format, char *buf);
+char				*ft_flag_plus(char *format, char *buf);
 
 int					ft_width(char *format, va_list ap);
+
 char				*ft_precision(char *format, va_list ap);
+char				*ft_precision_i(char *format, va_list ap, int i);
+
 char				*ft_length(char *format, va_list ap);
+
 char				*ft_spec(char *format, va_list ap);
 char				*ft_spec_l(char *format, va_list ap);
 char				*ft_spec_ll(char *format, va_list ap);
@@ -129,12 +134,14 @@ char				*ft_strncat(char *s1, const char *s2, size_t n);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
+char				*ft_goto(char c, char *str);
 char				*ft_strstr(const char *big, const char *little);
 char				*ft_strnstr(const char *big, \
 		const char *little, size_t len);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_atoi(const char *str);
+int					ft_trim_atoi(char *str);
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
 int					ft_isalnum(int c);
@@ -147,6 +154,8 @@ char				*ft_capitalize(char *src);
 void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);
 char				*ft_strnew(size_t size);
+char				*ft_0(int size);
+char				*ft_space(int size);
 void				ft_strdel(char **as);
 void				ft_strclr(char *s);
 void				ft_striter(char *s, void (*f)(char *));

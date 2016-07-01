@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_length.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: opichou <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: opichou <opichou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/08 07:34:18 by opichou           #+#    #+#             */
-/*   Updated: 2016/06/11 15:15:07 by opichou          ###   ########.fr       */
+/*   Updated: 2016/07/01 17:44:24 by opichou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@
 
 char			*ft_length(char *format, va_list ap)
 {
+	ft_put_com("entering ft_length", "");
+	while (ft_isdigit(*format) || ft_test_flags(format) || *format == '*')
+		format++;
 	if (*format == 'h')
 	{
 		if (*(format+1) == 'h')
